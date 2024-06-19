@@ -1,0 +1,42 @@
+@use "Library";
+
+@mixin import {
+  #nBoxPuzzle {
+    @include Library.mainPageFormat();
+    .nBoxSim {
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 5px;
+      label, button {margin-left: 4px;}
+      .boxDisplay {
+        display: grid;
+        grid-template-columns: repeat(20, 45px);
+        margin-top: 20px;
+        p {
+          text-align: center;
+          border: 1px solid black;
+          border-radius: 2px;
+          height: 25px;
+          width: 45px;
+          margin: 0;
+          cursor: pointer;
+        }
+        :hover {
+          background-color: rgb(194, 194, 194);
+        }
+      }
+      .resultsSection {
+        border: 2px solid black;
+        width: 90%;
+        border-radius: 5px;
+        p {
+          padding: 3px;
+          margin: 2px;
+          border-radius: 5px;
+        }
+        .complete {background-color: rgb(130, 255, 130);}
+        .incomplete {background-color: rgb(255, 142, 142);}
+      }
+    }
+  }
+}

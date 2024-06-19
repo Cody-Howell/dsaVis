@@ -1,5 +1,7 @@
+@use "Library";
+
 @mixin import {
   #homepage {
-    width: 50%;
+    @include Library.mainPageFormat();
   }
 }

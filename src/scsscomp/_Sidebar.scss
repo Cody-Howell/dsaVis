@@ -1,0 +1,19 @@
+@use "Library";
+
+@mixin import {
+  #sideBar {
+    border-right: 1px solid black;
+    a {
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      height: 30px;
+      padding-top: 10px;
+      color: white;
+      background-color: Library.$primary-color-500;
+    }
+    :hover {
+      background-color: Library.$primary-color-400;
+    }
+  }
+}

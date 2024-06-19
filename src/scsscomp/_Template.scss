@@ -1,5 +1,7 @@
+@use "Library";
+
 @mixin import {
   #pageName {
-    
+    @include Library.mainPageFormat();
   }
 }

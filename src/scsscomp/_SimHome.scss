@@ -1,0 +1,25 @@
+@use "Library";
+
+@mixin import {
+  #simHome {
+    @include Library.mainPageFormat();
+    #simLinks {
+      display: flex;
+      flex-wrap: wrap;
+      a {
+        font-size: 30px;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px;
+        margin: 0 10px 10px 0;
+        color: white;
+        background: linear-gradient(120deg, Library.$primary-color-700, Library.$secondary-color-700);
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+      :hover {
+        color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+$primary-color-100: hsl(270, 100%, 10%);
+$primary-color-200: hsl(270, 100%, 20%);
+$primary-color-300: hsl(270, 100%, 30%);
+$primary-color-400: hsl(270, 100%, 40%);
+$primary-color-500: hsl(270, 100%, 50%);
+$primary-color-600: hsl(270, 100%, 60%);
+$primary-color-700: hsl(270, 100%, 70%);
+$primary-color-800: hsl(270, 100%, 80%);
+$primary-color-900: hsl(270, 100%, 90%);
+
+$secondary-color-100: hsl(220, 100%, 10%);
+$secondary-color-200: hsl(220, 100%, 20%);
+$secondary-color-300: hsl(220, 100%, 30%);
+$secondary-color-400: hsl(220, 100%, 40%);
+$secondary-color-500: hsl(220, 100%, 50%);
+$secondary-color-600: hsl(220, 100%, 60%);
+$secondary-color-700: hsl(220, 100%, 70%);
+$secondary-color-800: hsl(220, 100%, 80%);
+$secondary-color-900: hsl(220, 100%, 90%);
+
+$accent-color-100: hsl(61, 100%, 10%);
+$accent-color-200: hsl(61, 100%, 20%);
+$accent-color-300: hsl(61, 100%, 30%);
+$accent-color-400: hsl(61, 100%, 40%);
+$accent-color-500: hsl(61, 100%, 50%);
+$accent-color-600: hsl(61, 100%, 60%);
+$accent-color-700: hsl(61, 100%, 70%);
+$accent-color-800: hsl(61, 100%, 80%);
+$accent-color-900: hsl(61, 100%, 90%);
+
+
+@mixin mainPageFormat {
+  padding: 0 10px;
+  margin-bottom: 40%;
+  height: 100%;
+}

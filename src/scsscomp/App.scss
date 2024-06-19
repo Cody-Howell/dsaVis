@@ -1,15 +1,18 @@
-@use "Home";
-
-
-
-
+@use "Home"; @use "Sidebar"; @use "SimHome"; @use "NBoxDilemma";
 
 html, body {
   padding: 0;
   margin: 0;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
 }
 #app {
-  
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  height: 100vh;
 }
 
-@include Home.import;
+@include Home.import();
+@include Sidebar.import();
+@include SimHome.import();
+@include NBoxDilemma.import();

@@ -1,8 +1,105 @@
 html, body {
   padding: 0;
   margin: 0;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  height: 100vh;
 }
 
 #homepage {
-  width: 50%;
+  padding: 0 10px;
+  margin-bottom: 40%;
+  height: 100%;
+}
+
+#sideBar {
+  border-right: 1px solid black;
+}
+#sideBar a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  height: 30px;
+  padding-top: 10px;
+  color: white;
+  background-color: hsl(270, 100%, 50%);
+}
+#sideBar :hover {
+  background-color: hsl(270, 100%, 40%);
+}
+
+#simHome {
+  padding: 0 10px;
+  margin-bottom: 40%;
+  height: 100%;
+}
+#simHome #simLinks {
+  display: flex;
+  flex-wrap: wrap;
+}
+#simHome #simLinks a {
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  margin: 0 10px 10px 0;
+  color: white;
+  background: linear-gradient(120deg, hsl(270, 100%, 70%), hsl(220, 100%, 70%));
+  border: 2px solid black;
+  border-radius: 10px;
+}
+#simHome #simLinks :hover {
+  color: black;
+}
+
+#nBoxPuzzle {
+  padding: 0 10px;
+  margin-bottom: 40%;
+  height: 100%;
+}
+#nBoxPuzzle .nBoxSim {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+#nBoxPuzzle .nBoxSim label, #nBoxPuzzle .nBoxSim button {
+  margin-left: 4px;
+}
+#nBoxPuzzle .nBoxSim .boxDisplay {
+  display: grid;
+  grid-template-columns: repeat(20, 45px);
+  margin-top: 20px;
+}
+#nBoxPuzzle .nBoxSim .boxDisplay p {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 25px;
+  width: 45px;
+  margin: 0;
+  cursor: pointer;
+}
+#nBoxPuzzle .nBoxSim .boxDisplay :hover {
+  background-color: rgb(194, 194, 194);
+}
+#nBoxPuzzle .nBoxSim .resultsSection {
+  border: 2px solid black;
+  width: 90%;
+  border-radius: 5px;
+}
+#nBoxPuzzle .nBoxSim .resultsSection p {
+  padding: 3px;
+  margin: 2px;
+  border-radius: 5px;
+}
+#nBoxPuzzle .nBoxSim .resultsSection .complete {
+  background-color: rgb(130, 255, 130);
+}
+#nBoxPuzzle .nBoxSim .resultsSection .incomplete {
+  background-color: rgb(255, 142, 142);
 }/*# sourceMappingURL=App.css.map */
