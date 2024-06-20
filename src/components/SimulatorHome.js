@@ -8,6 +8,7 @@ export class SimulatorHome extends React.Component {
         <h1>Simulators</h1>
         <div id='simLinks'>
           <Link to="/simulation/100prisonerpuzzle">100 Prisoner Puzzle</Link>
+          <Link to="/simulation/menace">MENACE!</Link>
         </div>
       </div>
     );

@@ -102,4 +102,62 @@ html, body {
 }
 #nBoxPuzzle .nBoxSim .resultsSection .incomplete {
   background-color: rgb(255, 142, 142);
+}
+
+#menacePage {
+  padding: 0 10px;
+  margin-bottom: 40%;
+  height: 100%;
+}
+#menacePage .menaceGame .buttonArea {
+  display: flex;
+}
+#menacePage .menaceGame .buttonArea .validButtons {
+  border: 1px solid black;
+  text-align: center;
+  width: 20px;
+  cursor: pointer;
+}
+#menacePage .menaceGame .buttonArea :hover {
+  background-color: lightgray;
+}
+#menacePage .menaceGame .tttDisplay {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+}
+#menacePage .menaceGame .tttDisplay p {
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+}
+#menacePage .menaceGame .allPositions {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#menacePage .menaceGame .allPositions h2 {
+  cursor: pointer;
+}
+#menacePage .menaceGame .allPositions .individualPosition {
+  height: 160px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+#menacePage .menaceGame .allPositions .individualPosition .beadArea {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+#menacePage .menaceGame .allPositions .individualPosition .beadArea p {
+  margin: 0;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 4px;
 }/*# sourceMappingURL=App.css.map */

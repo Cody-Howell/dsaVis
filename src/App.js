@@ -4,6 +4,7 @@ import './scsscomp/App.css';
 import { Home } from './components/Home';
 import { SimulatorHome } from './components/SimulatorHome';
 import { NBoxProblem } from './components/NBoxProblem.tsx';
+import { MENACESim } from './components/MENACE';
 
 class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
             <Route index element={<Home />} />
             <Route path="/simulation" element={<SimulatorHome />}/>
             <Route path="/simulation/100prisonerpuzzle" element={<NBoxProblem />}/>
+            <Route path="/simulation/menace" element={<MENACESim />}/>
 
 
           </Routes>

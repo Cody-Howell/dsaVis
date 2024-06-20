@@ -11,7 +11,7 @@ export class NBoxProblem extends React.Component {
           Their bill is placed in a random box that also has a number on it. Everyone is given 50 guesses to find their bill among
           the boxes; if everyone finds their bill, they all get $100, and if ANY don't find their bill, they all receive nothing.
           Once getting into the room, they exit through another door and don't have any communication with people coming in (so
-          no backwards communication). <br /> What is the best strategy?
+          no telling people behind you what's in a box). <br /> What is the best strategy?
         </p>
 
         <h2>References</h2>
@@ -20,9 +20,8 @@ export class NBoxProblem extends React.Component {
         <a href='https://www.youtube.com/watch?v=iSNsgj1OCLA' target='_blank' rel='noreferrer'>Veritasium's (Derek Muller) video</a>
 
         <h2>Try It Out</h2>
-        <p>When I first got here, I wasn't sure how this would work; Once you get through the first few, you'd know 
-          where all the bills are! I've decided that's not an issue; how consistently can you win with your strategy
-          (remember, everyone has to find their bill)? 
+        <p>When I first got here, I wasn't sure how this would work; once you get through the first few, you'd know 
+          where all the bills are! I've decided that's not an issue; can you win with your strategy? 
           And how many boxes can you beat? 
         </p>
 
@@ -30,15 +29,16 @@ export class NBoxProblem extends React.Component {
 
         <h2>Solution</h2>
         <p>SPOILERS BELOW!!! If you want to try to think through the solution yourself, look away for a bit. <br /> <br />
-          The solution is this: start at the box with your number and check it. The bill inside has either your number (you're good)
+          The solution is: start at the box with your number and check it. The bill inside either has your number (you're good)
           or another number; go to the box that number points to, and repeat. If you get back to your box within 50 guesses,
           you will have won, since you started with the box that had your number on it, which would have been in the previous box
           if you're back at your starting point. <br />
-          This takes advantage of loops within the boxes. If there are no loops of longer than the number of guesses that you have, 
+          This takes advantage of loops within the boxes (here called the Looping strategy). If there are no loops longer than the number of guesses that you have, 
           everyone will win! Please check out some of the videos in the references if you want to learn more, I recommend all of them. 
         </p>
-        <p>This is the same simulator, but it will run for you. So you can set some higher numbers and watch the computer play. It will 
-          run at (number of boxes)Hz. Initialize the boxes and select the strategy you want to see attempted, and it will run to completion. 
+        <p>This is the same simulator, but it will run for you. You can set some higher numbers and watch the computer play, either picking 
+          random viable options (no duplicates) or using this looping strategy. It will run at [number of boxes]Hz. Initialize the boxes 
+          and select the strategy you want to see attempted, and it will run to completion, though the reset button works if you want it. 
         </p>
 
         <NBoxSimulator playable={false}/>
