@@ -162,7 +162,7 @@ class MENACEGame extends React.Component {
   render() {
     let menacePositions = this.state.game.collection;
     let displayedPositions = [];
-    displayedPositions.push( // Push first position
+    displayedPositions.push( // Push first box
       <div className='individualPosition' key={"primaryposition"}>
         <DisplayTTT string={menacePositions[0].simplifiedPosition} playMove={() => console.log("Unavailable")} />
         <div className='beadArea'>
@@ -190,6 +190,24 @@ class MENACEGame extends React.Component {
         }
       }
     }
+
+    let currentPosition = [];
+    let path = this.state.game.path;
+    for (let i = 0; i < path.length; i++){
+      let beads = [];
+      for (let j = 0; j < path[i].box.beads.length; j++) {
+        beads.push(<p key={i + "currentPosition" + j}> Index: {path[i].box.beads[j].index} | Count: {path[i].box.beads[j].count} </p>)
+      }
+      currentPosition.push(
+        <div className='individualPosition' key={i + "currentPosition"}>
+          <DisplayTTT string={path[i].box.simplifiedPosition} playMove={() => console.log("Unavailable")} />
+          <div className='beadArea'>
+            {beads}
+          </div>
+        </div>
+      )
+    }
+
 
     return (
       <div className='menaceGame'>
@@ -219,7 +237,12 @@ class MENACEGame extends React.Component {
         <DisplayTTT string={this.state.game.currentGame} playMove={this.playRound} />
 
         <div className='allPositions'>
-          <h2 onClick={this.toggleOpen}>Open Position Collection ({displayedPositions.length})</h2>
+          <h2>Current Position</h2>
+          {currentPosition}
+        </div>
+
+        <div className='allPositions'>
+          <h2 onClick={this.toggleOpen} style={{cursor: "pointer"}}>Open Position Collection ({displayedPositions.length})</h2>
           {this.state.openPositions && (displayedPositions)}
         </div>
       </div>

@@ -11,10 +11,15 @@ html, body {
   height: 100vh;
 }
 
+#innerPage {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
 #homepage {
   padding: 0 10px;
   margin-bottom: 40%;
-  height: 100%;
 }
 
 #sideBar {
@@ -36,7 +41,6 @@ html, body {
 #simHome {
   padding: 0 10px;
   margin-bottom: 40%;
-  height: 100%;
 }
 #simHome #simLinks {
   display: flex;
@@ -60,7 +64,6 @@ html, body {
 #nBoxPuzzle {
   padding: 0 10px;
   margin-bottom: 40%;
-  height: 100%;
 }
 #nBoxPuzzle .nBoxSim {
   border: 1px solid black;
@@ -107,7 +110,6 @@ html, body {
 #menacePage {
   padding: 0 10px;
   margin-bottom: 40%;
-  height: 100%;
 }
 #menacePage .menaceGame .buttonArea {
   display: flex;
@@ -138,9 +140,6 @@ html, body {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-#menacePage .menaceGame .allPositions h2 {
-  cursor: pointer;
 }
 #menacePage .menaceGame .allPositions .individualPosition {
   height: 160px;

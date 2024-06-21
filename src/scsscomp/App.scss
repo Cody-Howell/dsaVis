@@ -13,6 +13,12 @@ html, body {
   height: 100vh;
 }
 
+#innerPage {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
 @include Home.import();
 @include Sidebar.import();
 @include SimHome.import();
